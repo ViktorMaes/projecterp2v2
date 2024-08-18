@@ -1,0 +1,18 @@
+<mvc:View
+    controllerName="projecterp2v2.controller.Home"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="homePage" title="Home">
+        <VBox class="sapUiSmallMargin">
+            <Button
+                text="Go to Games"
+                press="onNavToGames"
+                width ="100%" 
+                class="sapUiTinyMarginBottom" />
+            <Button
+                text="Go to Students"
+                press="onNavToStudents"
+                width="100%" />
+        </VBox>
+    </Page>
+</mvc:View>

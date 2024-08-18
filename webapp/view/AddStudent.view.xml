@@ -1,0 +1,25 @@
+<mvc:View
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    controllerName="projecterp2v2.controller.Students">
+    <Page id="AddStudentPage" title="Add Student">
+        <content>
+            <VBox id="studentVBox" class="sapUiSmallMargin">
+                <Title id="vbucks" text="Student Action Menu" level="H2" class="centeredTitle"/>
+                <Label id="studentIdLabel" text="Student ID" labelFor="studentIdInput" visible="{viewModel>/isEdit}"/>
+                <Input id="studentIdInput" value="{viewModel>/Studentid}" editable="false" visible="{viewModel>/isEdit}"/>
+                <Label id="firstNameLabel" text="Forname" labelFor="firstNameInput"/>
+                <Input id="firstNameInput" value="{viewModel>/Forname}" />
+                <Label id="lastNameLabel" text="Surname" labelFor="lastNameInput"/>
+                <Input id="lastNameInput" value="{viewModel>/Surname}" />
+            </VBox>
+        </content>
+        <footer>
+            <Toolbar>
+                <ToolbarSpacer />
+                <Button id="saveStudentButton" text="Save" press="onSaveStudent" type="Accept"/>
+                <Button id="cancelDialogButton" text="Cancel" press="onCancel" type="Reject"/>
+            </Toolbar>
+        </footer>
+    </Page>
+</mvc:View>

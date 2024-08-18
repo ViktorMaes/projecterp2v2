@@ -1,0 +1,24 @@
+<mvc:View
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    displayBlock="true"
+    controllerName="projecterp2v2.controller.Games">
+    <Page id="page" title="Games Menu">
+        <content>
+            <List id="gameList" items="{/gameSet}" mode="SingleSelectMaster" itemPress="onItemPress">
+                <ObjectListItem id="gameItem"
+                    title="{Name}"
+                    number="{Id}"
+                    numberUnit="{Genre}"
+                    type="Active"
+                    class="gameListItem">
+                    <attributes>
+                        <ObjectAttribute id="publisherAttr" text="{Publisher}"/>
+                        <ObjectAttribute id="platformAttr" text="{Platform}"/>
+                        <ObjectAttribute id="releaseDateAttr" text="{ path: 'Releasedate', formatter: '.formatDate' }"/>
+                    </attributes>
+                </ObjectListItem>
+            </List>
+        </content>
+    </Page>
+</mvc:View>
